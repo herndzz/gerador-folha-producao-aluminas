@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de PDF</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Ordem de Produção</h1>
+    <form id="formulario">
+      <div class="input-group">
+        <label for="descricao">Descrição do Produto:</label>
+        <textarea id="descricao" name="descricao" placeholder="Digite a descrição" required></textarea>
+      </div>
+
+      <div id="nomes-container" class="nomes-container">
+        <button type="button" class="add-button" onclick="adicionarNome()">Adicionar Nome</button>
+      </div>
+
+      <div class="input-group">
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes" placeholder="Digite as observações"></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Digite o nome do cliente" required>
+      </div>
+
+      <div class="input-group">
+        <label for="codigoOS">Código OS:</label>
+        <input type="text" id="codigoOS" name="codigoOS" placeholder="Digite o código OS" required pattern="^[A-Za-z0-9]+$">
+      </div>
+
+      <div class="input-group">
+        <label for="celularCliente">Celular do Cliente:</label>
+        <input type="text" id="celularCliente" name="celularCliente" placeholder="Digite o celular" required pattern="^\(\d{2}\) \d{4,5}-\d{4}$">
+      </div>
+
+      <div class="input-group">
+        <label for="nomeContato">Nome do Contato:</label>
+        <input type="text" id="nomeContato" name="nomeContato" placeholder="Digite o nome do contato" required>
+      </div>
+
+      <div class="input-group">
+        <label for="dataPedido">Data do Pedido:</label>
+        <input type="date" id="dataPedido" name="dataPedido" required>
+      </div>
+
+      <div class="input-group">
+        <label for="previsaoEntrega">Previsão de Entrega:</label>
+        <input type="date" id="previsaoEntrega" name="previsaoEntrega" required>
+      </div>
+
+      <button type="button" class="generate-button" onclick="gerarPDF()">Gerar PDF</button>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
