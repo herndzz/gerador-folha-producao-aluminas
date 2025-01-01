@@ -38,6 +38,15 @@ function removerNome(id) {
 }
 
 // Função para gerar o PDF
+/**
+ * Gera um arquivo PDF contendo os dados do formulário e salva com a data e hora atual no nome do arquivo.
+ * Utiliza a biblioteca jsPDF para criar e manipular o PDF.
+ * 
+ * @async
+ * @function gerarPDF
+ * 
+ * @returns {Promise<void>} - Uma promessa que é resolvida quando o PDF é gerado e salvo.
+ */
 async function gerarPDF() {
   const { jsPDF } = window.jspdf || window.jspdf.jsPDF;
   const doc = new jsPDF();

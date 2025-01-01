@@ -1,3 +1,31 @@
+<!-- 
+Este arquivo HTML cria um formulário para gerar um PDF de ordem de produção. O formulário inclui campos para descrição do produto, informações do cliente e detalhes do pedido. Ele usa a biblioteca jsPDF para gerar o PDF.
+
+Elementos:
+- <meta charset="UTF-8">: Define a codificação de caracteres como UTF-8.
+- <meta name="viewport" content="width=device-width, initial-scale=1.0">: Garante que a página seja responsiva.
+- <title>Gerador de PDF</title>: Define o título da página.
+- <link rel="stylesheet" href="./styles.css">: Link para o arquivo CSS externo para estilização.
+- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>: Inclui a biblioteca jsPDF para geração de PDF.
+
+Campos do Formulário:
+- Descrição do Produto: Textarea para inserir a descrição do produto.
+- Observações: Textarea para inserir observações adicionais.
+- Nome do Cliente: Campo de texto para inserir o nome do cliente.
+- Código OS: Campo de texto para inserir o código do pedido, com um padrão para permitir apenas caracteres alfanuméricos.
+- Celular do Cliente: Campo de texto para inserir o número de celular do cliente, com um padrão para o formato de telefone brasileiro.
+- Nome do Contato: Campo de texto para inserir o nome da pessoa de contato.
+- Data do Pedido: Campo de data para inserir a data do pedido.
+- Previsão de Entrega: Campo de data para inserir a previsão de entrega.
+
+Botões:
+- Adicionar Nome: Botão para adicionar mais nomes (funcionalidade a ser definida em script.js).
+- Gerar PDF: Botão para gerar o PDF usando a função gerarPDF() definida em script.js.
+
+Script Externo:
+- <script src="./script.js"></script>: Link para o arquivo JavaScript externo para funcionalidade adicional.
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
